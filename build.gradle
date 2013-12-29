@@ -1,0 +1,18 @@
+subprojects {
+
+	apply plugin: 'java'
+
+	repositories {
+		mavenCentral()
+	}
+
+}
+
+project(':impl') {
+
+	dependencies {
+		compile project(':api')
+		testCompile 'junit:junit:4.11'
+	}
+
+}
